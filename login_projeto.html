@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>formulário de compra</title>
+
+    <link rel="icon" href="favicon_queen.png" sizes="32x32">
+
+    <style type="text/css">
+
+        body
+        {
+            font-family: arial;
+            color: black;
+            
+            background-position: center center;
+            background-image: url("fundo_pronto.png") ;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-size: 100%;
+            font-size: 20px;
+            margin-top: 330px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav
+        {  
+            background-color: #a2a0a0;
+            color: white;
+            letter-spacing: 1px;
+            padding: 10px;
+            
+            display: flex;
+            justify-content: space-around;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            font-size: 20px;
+        }
+
+        nav a:link 
+        {
+            color: #3C3633;
+            text-decoration: none;
+        }
+
+        nav a:visited
+        {
+            color: #3C3633;
+            text-decoration: none;
+        }
+
+        nav a:active
+        {
+            color: #3C3633;
+            text-decoration: none;
+        }
+
+        nav a:hover
+        {
+            color: #3C3633;
+            text-decoration: underline;
+        }
+
+        #box
+        {
+            height: 1800px;
+            margin-top: 100px; 
+            margin-bottom: 30px;         
+            padding: 20px;
+            width: 700px;
+            position: relative;
+            margin-top: 100px;
+            box-sizing: border-box;
+            
+            border-radius: 20px;
+            opacity: 0.8;
+            box-shadow: 20px 20px 20px black;
+            background-color: #a2a0a0;
+        }
+
+        .logo img
+        {
+            text-align: center;
+            margin-top: 20px;
+            display: block;
+            width: 368px;
+            height: auto;
+            margin: 0 auto 20px auto;
+        }
+
+        label
+        {
+            font-weight: bold;
+        }
+
+        label:hover
+        {
+            color: rgb(147,112,219);
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="number"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"]
+        {
+            width: 100%;
+            height: 20px;
+            border: 0;
+            border-bottom: 1px solid black;
+            background-color:  #a2a0a0;
+            font-size: 15px;
+        }
+
+        select
+        {
+            border: 0;
+            border-bottom: 1px solid black;
+            background-color:  #a2a0a0;
+            font-size: 15px;
+        }
+
+        input[type="radio"]
+        {
+            accent-color: black;
+        }
+
+
+        input[type="submit"]:hover
+        {
+            background: black; 
+            color: white;
+        }
+
+        input[type="reset"]:hover
+        {
+            background: black; 
+            color: white;
+        }
+        
+        input[type="submit"],
+        input[type="reset"]
+        {
+            width: 50%;
+            height: 30px;
+            border: 0;
+
+            background: #d9d9d9; 
+            color: black;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 5px; 
+        }
+
+        h2
+        {
+            color: black;
+            align-items: center;
+        }
+
+        table
+        {
+            width: 110%;
+            padding: 0px;
+            margin: 10px;
+            border-spacing: -5px;
+        }
+
+        a:link
+        {
+            color: black;
+            text-decoration: italic;
+        }
+
+        .palco img
+        {
+            width: 45%;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 9%;
+
+            box-shadow: 6px 6px #3C3633;
+        }
+
+
+        .palco img:hover
+        {
+            width: 55%;
+            height: 55%;
+            margin-bottom: 0;
+
+            box-shadow: -6px -6px #3C3633;
+        }
+
+        input::placeholder
+        {
+            color: black;
+        }
+
+       
+
+    </style>
+</head>
+<body>
+    <nav>
+            <a href="login_projeto.html"><img src="queen_logo.png" width="90" height="28"></a>
+            <span><a href="#cadastrar">Cadastrar</a></span>
+            <span><a href="index.html">Página inicial</a></span>
+    </nav>
+
+    <div id="box">
+        <div class="logo"><img src="queen_logo.png" width="368" height="124"></div>
+
+        <h2 align=center id="inicio">Formulário para compra do ingresso</h2>
+            
+            <form>
+            Nome completo:
+            <input type="text" name="nome" size="40" placeholder="digite aqui" required>
+             <br><br>
+            Idade:
+            <input type="number" name="idade" title="idade minima de 16 anos." value="16" min="16" max="110" required>
+            <br><br>
+            Data de nascimento:
+            <input type="date" name="nascimento" required>
+            <br><br>
+            Sexo:
+            <input type="radio" id="sexo" name="sexo" value="fem" checked required>F
+            <input type="radio" id="sexo" name="sexo" value="masc" required>M
+            <br><br>
+            CPF: 
+            <input type="text" name="cpf" required placeholder="ex:123.456.789-0">
+            <br><br>
+            RG: 
+            <input type="text" name="rg" required placeholder="ex:12.345.678-9">
+            <br><br>
+            Email para contato:
+            <input type="email" name="email" size="40" placeholder="usuario@exemplo.com.br" required>
+            <br><br>
+            Senha:
+            <input type="password" name="senha" title="senha do email" required>
+            <br><br>
+            Telefone:
+            <input type="tel" name="phone" placeholder="ex:+55(99)123456789" required>
+            <br><br>
+            Escolha seu ingresso:
+            <select>
+                <option>R$300 - 1a fila</option>
+                <option>R$230 - 2a fila</option>
+                <option>R$180 - 3a fila</option>
+            </select>
+            <br><br>
+
+            <center>
+            <div class="palco">
+                <img src="palco_projeto.png" height="200px" border="3px">
+            </div>
+            </center>
+
+            Data e hora:
+            <select>
+                <option>10/08/24-08h</option>
+                <option>10/08/24-15h</option>
+                <option>10/08/24-20h</option>
+                <option>11/08/24-08h</option>
+                <option>11/08/24-15h</option>
+                <option>11/08/24-20h</option>
+                <option>12/08/24-08h</option>
+                <option>12/08/24-15h</option>
+                <option>12/08/24-20h</option>
+            </select>
+            <hr>
+
+            <table>
+                <td>
+                <input type="submit" name="cadastrar" value="cadastrar" required id="cadastrar">
+                </td>
+                <td>
+                <input type="reset" name="limpar" value="limpar" required>
+                </td>
+            </table>
+
+            </form>
+    </div>
+</body>
+</html>

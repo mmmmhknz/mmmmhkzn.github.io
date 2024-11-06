@@ -1,0 +1,449 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>página inicial</title>
+		
+		<style type="text/css">
+			
+		body
+		{
+			margin: 0px;
+			margin-right: 20px;
+			margin-left: 0px;
+			background-image: url("fundo_pronto.png") ;
+	        background-repeat: no-repeat;
+	        background-position: center center;
+	        background-attachment: fixed;
+	        background-size: 100%;
+	        top: 0;
+			height: 100vh;
+
+			font-family: arial;
+			color: white;
+		}
+
+		nav
+		{
+			display: flex;
+			justify-content: space-around;
+			background-color: #a2a0a0;
+			color: white;
+			letter-spacing: 1px;
+			padding: 10px;
+			
+			position: fixed;
+			width: 100%;
+			z-index: 1000;
+			background-attachment: fixed;
+			margin-top: 0;
+			top: 0;
+			left: 0;
+			font-size: 20px;
+		}
+
+		nav a:link 
+		{
+			color: #3C3633;
+			text-decoration: none;
+		}
+
+		nav a:visited
+		{
+			color: #3C3633;
+			text-decoration: none;
+		}
+
+		nav a:active
+		{
+			color: #3C3633;
+			text-decoration: none;
+		}
+
+		nav a:hover
+		{
+			color: #3C3633;
+			text-decoration: underline;
+		}
+	
+		#banda
+		{
+			margin: 10px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+
+		.membro
+	  	{
+	  		background-color: white;
+	  		margin-top: 20px;
+	  		margin-left: 20px;
+	  		border-radius: 20px;
+	  		box-shadow: 10px 10px #a2a0a0;
+	  		opacity: 0.8;
+			
+			width: 20%;
+	  		display: flex;
+	  		flex-direction: column;
+	  		align-items: center;
+	  		color: black;
+		}
+
+		.membro:hover
+		{
+			color: black;
+			box-shadow: -10px -10px #a2a0a0;
+		}
+		.membro img
+		{
+			width: 80%;
+			margin-bottom: 5%;
+		}
+
+		.membro img:hover
+		{
+			width: 85%;
+			margin-bottom: 0%;
+		}
+
+		#musicas
+		{
+			margin: 10px;
+			width: 100%;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.video
+		{
+			
+	  		margin-bottom: 10px;
+	  		width: 1500px;
+	  		padding: 10px;
+	  		box-sizing: border-box;
+	  		max-width: 800px;
+	  		text-align: left;
+	  		clear: both;
+	  		display: flex;
+	  		align-items: center;
+	  		justify-content: space-between;
+
+	  		border: 1px solid white;
+	  		background-color: transparent;
+	  		box-shadow: none;
+	  		border-radius: 7px;
+		}
+
+		.video:hover
+		{
+			box-shadow: 10px 10px #a2a0a0;
+		}
+
+		.video p
+		{
+			margin: 0;
+			font-size: 25px;
+		}
+
+		.video .title {
+            font-weight: bold;
+            font-size: 1.2em;
+            display: block;
+        }
+
+        .video .views {
+            font-size: 0.9em;
+            color: #dcdcdc;
+        }
+
+		iframe {
+            display: block;
+            margin: 20px;
+            border-radius: 5px;
+        }
+
+		#texto1
+		{
+			font-size: 20px;
+		}
+
+		#esses
+		{
+			font-size: 22px;
+		}
+
+		.logo
+		{
+			text-align: center;
+			margin-top: 20px;
+		}
+
+		table,
+		tr,
+		td,
+		th
+		{
+			border-color: white;
+			border-width: 1px;
+			text-align: center;
+		}
+
+		th
+		{
+			font-size: 20px;
+		}
+
+		#info
+		{
+			margin: 10px;
+			width: 100%;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			color: black;
+		}
+
+
+		.item
+		{
+			margin-bottom: 10px;
+    		width: 100%;
+    		max-width: 800px;
+    		padding: 10px;
+  	  		box-sizing: border-box;
+    		text-align: left;
+    		
+    		box-shadow: none;    		
+    		border-radius: 7px;
+    		border: 1px solid white;
+    		background-color: white;
+    		opacity: 0.8;
+    		color: black;
+    		box-shadow: 10px 10px gray;
+		}
+
+		.item p
+		{
+			margin: 0;
+			font-size: 22px;
+			color: black;
+		}
+
+		.item .title {
+            font-weight: bold;
+            font-size: 1.2em;
+            display: block;
+            color: black;
+        }
+
+        .item .views {
+            font-size: 0.9em;
+            color: black;
+        }
+
+        .item:hover
+        {
+        	box-shadow: -10px -10px gray;
+        }
+
+        ol
+        {
+        	list-style-type: "★ ";
+        }
+
+		</style>
+
+		<link href="https://fonts.googleapis.com/css2?family=Briem+Hand&family=Luckiest+Guy&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+		
+		<link rel="icon" href="favicon_queen.png" sizes="32x32">
+
+	</head>
+
+<body>
+		<nav>
+			<a href="index.html"><img src="queen_logo.png" width="90" height="28"></a>
+			<a href="#esses">Álbuns e músicas</a>
+			<a href="login_projeto.html">Ingressos</a>
+		</nav>
+<br><br>
+
+<div class="logo"><img src="queen_imagem_grande.png" width="368" height="124"></div>
+
+<div id=texto1>
+			<p align="center">O <b>Queen</b> é uma das bandas mais icônicas da história da música, conhecida por sua energia, <br>habilidade musical excepcional e pelo carisma de seu vocalista, <u>Freddie Mercury</u>. <p align="center">Formada em 1970, em Londres, a banda era composta por:</p> 
+</div>
+
+<div id="banda">
+	<div class="membro">
+
+				<h2>Freddie Mercury</h2>
+				cantor e pianista
+				<img src="freddie_pronto.png">
+	</div>
+
+	<div class="membro">
+				<h2>Roger Taylor</h2>
+				baterista
+				<img src="roger_pronto.png">
+
+	</div>
+
+	<div class="membro">
+				<h2>John Deacon</h2>
+				baixista
+				<img src="john_pronto.png">
+
+	</div>
+
+	<div class="membro">
+				<h2>Brian May</h2>
+				guitarrista
+				<img src="brian_pronto.png">
+	</div>
+</div>
+
+<div id="texto1">		
+		<p align="center">O <b>Queen</b> alcançou sucesso comercial e crítico com uma mistura única de estilos musicais, incluindo <i>rock, glam rock,<br> opera rock</i> e até mesmo elementos de música clássica. Suas músicas eram marcadas por letras inteligentes<br> e temas variados, desde o amor e a liberdade até a fantasia e a reflexão sobre o mundo.
+		<p align="center"><b>As músicas mais conhecidas do QUEEN são:</p></b>
+</div>
+
+<div id="musicas">		
+		<div class="video">
+			<p><span class="title">Bohemian Rhapsody</span><br>
+			<span class="views">1,7 bilhões de vizualizações</span></p>
+			
+			<iframe width="260" height="150" src="https://www.youtube.com/embed/fJ9rUzIMcZQ?si=TmhdwGYVSzwbdQIS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		</div>
+		<br>
+
+		<div class="video">
+		<p><span class="title">Don't stop me now</span><br>
+			<span class="views">890 milhões de vizualizações</span></p>
+
+			<iframe width="260" height="150" src="https://www.youtube.com/embed/HgzGwKwLmgM?si=Y1cgsFHk_IN0_S2X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+		</div>
+		<br>
+
+		<div class="video">
+		<p><span class="title">Another one bites the dust</span><br>
+			<span class="views">631 milhões de vizualizações</span></p>
+
+			<iframe width="260" height="150" src="https://www.youtube.com/embed/rY0WxgSXdEE?si=vrNJYaptKbU7xEjq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+		</div>
+		<br>
+
+		<div class="video">
+		<p><span class="title">We will rock you</span><br>
+			<span class="views">604 milhões de vizualizações</span></p>
+
+			<iframe width="260" height="150" src="https://www.youtube.com/embed/-tJYN-eG1zk?si=bbsSAvPHd9AwITga" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		</div>
+</div>
+		<br>
+
+		<div id="texto1" align="center">
+		Os álbuns do Queen representam um marco na história do rock, refletindo a genialidade e a inovação da banda britânica<br> formada em 1970. Com sua fusão única de estilos, incluindo rock, ópera e glam, o Queen conquistou o mundo com álbuns icônicos<br> como "A Night at the Opera" e "The Game". Sua habilidade em misturar complexidade musical com apelo popular solidificou<br> sua posição como uma das bandas mais influentes e amadas da história da música.<br><br>
+
+		<div id="esses"><b>Esses são todos os álbuns da banda:</b></div>
+		</div>
+
+		<br><br>
+
+		<table width="500px" bordercolor="black" cellspacing="1px" cellpadding="0px" border="1px" id="tabela" align="center">
+		    <tr>
+		        <th>Álbum</th>
+		        <th>Quantidade de Músicas</th>
+		    </tr>
+		    <tr>
+		        <td>Queen</td>
+		        <td>10</td>
+		    </tr>
+		    <tr>
+		        <td>Queen II</td>
+		        <td>11</td>
+		    </tr>
+		    <tr>
+		        <td>Sheer Heart Attack</td>
+		        <td>13</td>
+		    </tr>
+		    <tr>
+		        <td>A Night at the Opera</td>
+		        <td>12</td>
+		    </tr>
+		    <tr>
+		        <td>A Day at the Races</td>
+		        <td>10</td>
+		    </tr>
+		    <tr>
+		        <td>News of the World</td>
+		        <td>11</td>
+		    </tr>
+		    <tr>
+		        <td>Jazz</td>
+		        <td>13</td>
+		    </tr>
+		    <tr>
+		        <td>The Game</td>
+		        <td>10</td>
+		    </tr>
+		    <tr>
+		        <td>Flash Gordon</td>
+		        <td>N/A</td>
+		    </tr>
+		    <tr>
+		        <td>Hot Space</td>
+		        <td>11</td>
+		    </tr>
+		    <tr>
+		        <td>The Works</td>
+		        <td>11</td>
+		    </tr>
+		    <tr>
+		        <td>A Kind of Magic</td>
+		        <td>9</td>
+		    </tr>
+		    <tr>
+		        <td>The Miracle</td>
+		        <td>13</td>
+		    </tr>
+		    <tr>
+		        <td>Innuendo</td>
+		        <td>12</td>
+		    </tr>
+		    <tr>
+		        <td>Made in Heaven</td>
+		        <td>12</td>
+		    </tr>
+		</table>
+
+		<br><br>
+
+<div id="esses" align="center"><b>Aqui estão algumas curiosidades que poucos fãs conhecem! Confira:</b></div><br>
+
+<div id="info">
+		<div class="item">
+		<ol>
+			<li><p><span class="title">Origem do nome</span>
+			<span class="views"> O nome "Queen" foi sugerido por Freddie Mercury, o vocalista da banda. Freddie queria um nome que fosse grandioso e que refletisse a ambição da banda. O nome foi escolhido em parte para criar uma imagem de realeza e grandeza, algo que a banda realmente alcançou com o tempo.</span></p></li><br>
+
+			<li><p><span class="title">Logo da banda</span>
+			<span class="views"> O nome "Queen" foi sugerido por Freddie Mercury, o vocalista da banda. Freddie queria um nome que fosse grandioso e que refletisse a ambição da banda. O nome foi escolhido em parte para criar uma imagem de realeza e grandeza, algo que a banda realmente alcançou com o tempo.</span></p></li><br>
+
+			<li><p><span class="title">Impacto do Live aid</span>
+			<span class="views"> O nome "Queen" foi sugerido por Freddie Mercury, o vocalista da banda. Freddie queria um nome que fosse grandioso e que refletisse a ambição da banda. O nome foi escolhido em parte para criar uma imagem de realeza e grandeza, algo que a banda realmente alcançou com o tempo.</span></p></li><br>
+		</ol>
+		</div>
+</div>
+
+		<div id="texto1" align="center">Obrigado por nos visitar!</div>
+		<br><br>
+	</body>
+</html>
